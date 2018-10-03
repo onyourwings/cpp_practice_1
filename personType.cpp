@@ -55,21 +55,21 @@ void personType::setAge(int ageP)
 		age = ageP;
 }
 
-void personType::getName(void) const
+string personType::getName(void) const
 {
 	return (firstName + lastName)
 }
 
-void personType::getFirstname(void) const
+string personType::getFirstname(void) const
 {
 	return firstName;
 }
-void personType::getLastname(void) const
+string personType::getLastname(void) const
 {
 	return lastName;
 }
 
-void personType::getAge(void) const
+int personType::getAge(void) const
 {
 	return age;
 }
