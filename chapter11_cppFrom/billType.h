@@ -1,23 +1,24 @@
 #ifndef BILLTYPE_H
 #define BILLTYPE_H
 
+#include "patientType.h"
+#include "doctorType.h"
 class billType
 {
 public:
 	billType();
-	billType(patientType patientP, int doctorFeeRatioP, int MedicFeePriceP, int MedicUnitsP);
-	void setPatient(string fristNameP, string lastNameP, int Id, int ageP, 
-					dateType startDateP, dateType DateofBirthP , dateType dischargeDateP, doctorType reponDoctorP);
-	void setDoctorFeeRatio(int);
+	billType(patientType patientP,  int MedicFeePriceP, int MedicUnitsP);
+	void setPatient(patientType patientP);
 	void setMedicFeePrice(int);
 	void setMedicUnits(int);
 	void getBill(void);
 
+
 private:
 	patientType patient;
-	int doctorFeeRatio;
+	int doctorCharge;
 	int MedicFeePrice;
 	int MedicUnits;
-	//void calPrice
-}
+	int calDoctorCharge();
+};
 #endif

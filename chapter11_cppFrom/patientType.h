@@ -3,7 +3,9 @@
 
 #include <iostream>
 #include <string>
-
+#include "personType.h"
+#include "dateType.h"
+#include "doctorType.h"
 using namespace std;
 
 class patientType : public personType
@@ -19,11 +21,15 @@ class patientType : public personType
 			void setDischargeDate(dateType);
 			void setAttenDoctor(doctorType);
 
-			int getPatientID(void) const;
-			dateType getStartDate(void) const;
-			dateType getDateOfBirth(void) const;
-			dateType getDischargeDate(void) const;
-			doctorType getDoctor(void) const;
+			int getPatientId(void) const;
+			void getStartDate(void) const;
+			void getDateOfBirth(void) const; 
+			void getDischargeDate(void) const;
+			void getDoctor(void) const;
+			int getDoctorRatio(void) 
+				{
+					return reponDoctor.getFeeRatio();
+				}
 
 			~patientType();
 	private:
@@ -34,6 +40,6 @@ class patientType : public personType
 		doctorType reponDoctor;
 
 
-}
+};
 
 #endif

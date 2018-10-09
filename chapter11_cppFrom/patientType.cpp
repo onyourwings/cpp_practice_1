@@ -1,8 +1,8 @@
 #include "patientType.h"
 
-patientType::patientType
+patientType::patientType()
 {
-
+	patientID = 0;
 }
 patientType::patientType(string firstNameP, string lastNameP, int Id, int ageP, dateType startDateP,
 						 dateType DateofBirthP, dateType dischargeDateP, doctorType reponDoctorP)
@@ -63,28 +63,28 @@ void patientType::setAttenDoctor(doctorType reponDoctorP)
 	reponDoctor = reponDoctorP;
 }
 
-int patientType::getPatientID(void) const
+int patientType::getPatientId(void) const
 {
 	return patientID;
 }
-dateType 	patientType::getStartDate(void) const
+void patientType::getStartDate(void) const
 {
-	return startDate;
+	startDate.printDate();
 }
-dateType 	patientType::getDateOfBirth(void) const
+void 	patientType::getDateOfBirth(void) const
 {
-	return dateOfBirth;
+	dateOfBirth.printDate();
 }
-dateType 	patientType::getDischargeDate(void) const
+void 	patientType::getDischargeDate(void) const
 {
-	return dischargeDate;
+	 dischargeDate.printDate();
 }
-doctorType 	patientType::getDoctor(void) const
+void 	patientType::getDoctor(void) const
 {
-	return reponDoctor;
+	 reponDoctor.getName();
 }
 
-patientType::~patientType
+patientType::~patientType()
 {
 
 }

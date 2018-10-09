@@ -12,6 +12,7 @@ public:
 	dateType();
 	dateType(int, int, int);
 	dateType(int, string, int);
+	void setDate(int, int, int);
 	void setDay(int);
 	void setMonth(int);
 	void setMonth(string);
@@ -34,7 +35,7 @@ private:
 	void makeMonthStr();
 	void makeMonthInt();
 
-}
+};
 
 
 #endif

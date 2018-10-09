@@ -44,7 +44,7 @@ void personType::printAge(void) const
 	cout << age;
 }
 
-void personType::setName(string firstNameP, lastNameP) 
+void personType::setName(string firstNameP, string lastNameP) 
 {
 	firstName= firstNameP;
 	lastName = lastNameP;
@@ -57,7 +57,7 @@ void personType::setAge(int ageP)
 
 string personType::getName(void) const
 {
-	return (firstName + lastName)
+	return (firstName + lastName);
 }
 
 string personType::getFirstname(void) const

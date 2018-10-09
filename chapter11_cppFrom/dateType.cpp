@@ -59,6 +59,31 @@ dateType::dateType(int dayP, string month_strP, int yearP)
 	if(yearP > 0)
 		year = yearP;
 }
+void dateType::setDate(int dayP, int monthP, int yearP)
+{
+	if(dayP > 0 && dayP < 32)
+		day = dayP;
+	else
+	{
+		day = 1;
+		cout << "Invalid day!" << endl;
+	}
+	
+	if(monthP>0 && monthP<13)
+	{
+		month = monthP;
+		makeMonthStr();
+	}
+	else
+	{
+		month = 1;
+		month_str = "Jan";
+		cout << "Invalid month!" << endl;
+	}
+
+	if(yearP > 0)
+		year = yearP;
+}
 
 void dateType::setDay(int dayP)
 {
@@ -135,7 +160,7 @@ int dateType::getMonth() const
 	return month;
 }
 
-int dateType::getDay() const
+int dateType::getYear() const
 {
 	return year;
 }
@@ -163,7 +188,7 @@ bool dateType::checkMonthValid(string month_strP) const
 		month_strP == "Sep" ||
 		month_strP == "Oct" ||
 		month_strP == "Nov" ||
-		month_strP == "Dec" ||)
+		month_strP == "Dec" )
 		return true;
 	else
 		return false;
@@ -191,21 +216,30 @@ void dateType::makeMonthStr()
 
 void dateType::makeMonthInt() 
 {
-	switch(month_str)
-	{
-		case "Jan" : {month = 1; break;}
-		case "Feb" : {month = 2; break;}
-		case "Mar" : {month = 3; break;}
-		case "Apr" : {month = 4; break;}
-		case "May" : {month = 5; break;}
-		case "Jun" : {month = 6; break;}
-		case "Jul" : {month = 7; break;}
-		case "Aug" : {month = 8; break;}
-		case "Sep" : {month = 9; break;}
-		case "Oct" : {month = 10; break;}
-		case "Nov" : {month = 11; break;}
-		case "Dec" : {month = 12; break;}
-		default: month = 1;
-			
-	}
+	if(month_str.compare("Jan"))
+		month  = 1;
+	else if (month_str.compare("Feb"))
+		month = 2;
+	else if (month_str.compare("Mar"))
+		month = 3;
+	else if (month_str.compare("Apr"))
+		month = 4;
+	else if (month_str.compare("May"))
+		month = 5;
+	else if (month_str.compare("Jun"))
+		month = 6;
+	else if (month_str.compare("Jul"))
+		month = 7;
+	else if (month_str.compare("Aug"))
+		month = 8;
+	else if (month_str.compare("Sep"))
+		month = 9;
+	else if (month_str.compare("Oct"))
+		month = 10;
+	else if (month_str.compare("Nov"))
+		month = 11;
+	else if (month_str.compare("Dec"))
+		month = 12;
+	else
+		month = 1;
 }
