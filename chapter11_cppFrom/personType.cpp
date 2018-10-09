@@ -57,7 +57,7 @@ void personType::setAge(int ageP)
 
 string personType::getName(void) const
 {
-	return (firstName + lastName);
+	return (firstName + " " + lastName);
 }
 
 string personType::getFirstname(void) const
