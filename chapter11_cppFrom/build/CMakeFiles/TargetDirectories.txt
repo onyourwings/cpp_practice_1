@@ -1,0 +1,3 @@
+/home/scratch/nhuongmh/tcpp/chapter11_cppFrom/build/CMakeFiles/edit_cache.dir
+/home/scratch/nhuongmh/tcpp/chapter11_cppFrom/build/CMakeFiles/rebuild_cache.dir
+/home/scratch/nhuongmh/tcpp/chapter11_cppFrom/build/CMakeFiles/HospitalBill.dir
